@@ -1,0 +1,15 @@
+/* TODO: ナビゲーションにホバーした時の色変え */
+/* TODO: 今いるページに対応するnav項目の色変え */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  background-color: skyblue;
+}
+
+.header ul {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-start;
+}

@@ -11,10 +11,11 @@ export type Post = {
   title: string
   slug: string
   date: string
+  tags: string[]
   content: string
 }
 
-function getAllPostSlugs() {
+export function getAllPostSlugs() {
   return fs.readdirSync(postsPath).map(slug => slug.replace(/\.md$/, ''))
 }
 
@@ -29,7 +30,7 @@ export function getPostBySlug(slug: string): Post {
   const fileContent = fs.readFileSync(path.join(postsPath, slug + '.md'), 'utf8')
   const matterResult = matter(fileContent)
   const {
-    data: { title, date },
+    data: { title, date, tags },
     content,
   } = matterResult
 
@@ -37,6 +38,7 @@ export function getPostBySlug(slug: string): Post {
     title,
     slug,
     date,
+    tags,
     content,
   }
 }
