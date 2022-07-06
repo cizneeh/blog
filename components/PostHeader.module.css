@@ -4,3 +4,11 @@
   justify-content: start;
   gap: 1rem;
 }
+
+.date {
+  text-align: right;
+}
+
+.post_header {
+  margin-bottom: 3rem;
+}

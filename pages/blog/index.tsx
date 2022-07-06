@@ -1,6 +1,7 @@
 import { GetStaticProps } from 'next'
 import Link from 'next/link'
 import { listenerCount } from 'process'
+import PostList from '../../components/PostList'
 import { Post, getAllPosts } from '../../lib/post'
 
 type Props = {
@@ -9,16 +10,9 @@ type Props = {
 
 function BlogPage({ posts }: Props) {
   return (
-    <div>
-      <ul>
-        {posts.map(({ title, date, slug }) => (
-          <li key={slug}>
-            <Link href={`/blog/${slug}`}>{title}</Link>
-            <time>{date}</time>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <>
+      <PostList posts={posts} />
+    </>
   )
 }
 

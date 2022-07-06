@@ -1,18 +1,16 @@
-import { FaGithub, FaTwitter } from 'react-icons/fa'
+import GithubIcon from './icons/GithubIcon'
+import TwitterIcon from './icons/TwitterIcon'
+import styles from './Footer.module.css'
 
 function Footer() {
   return (
-    <footer>
-      <ul>
+    <footer className={styles.footer}>
+      <ul className={styles.icons}>
         <li>
-          <a href="https://twitter.com/cizneeh" target="_blank" rel="noreferrer">
-            <FaTwitter />
-          </a>
+          <TwitterIcon />
         </li>
         <li>
-          <a href="https://github.com/cizneeh" target="_blank" rel="noreferrer">
-            <FaGithub />
-          </a>
+          <GithubIcon />
         </li>
       </ul>
     </footer>

@@ -4,7 +4,9 @@ import styles from './Header.module.css'
 function Header() {
   return (
     <header className={styles.header}>
-      <h2 className="title">Echizen no Blog</h2>
+      <h2 className="title">
+        <Link href="/">Echizen no Blog</Link>
+      </h2>
       <nav>
         <ul>
           <li>

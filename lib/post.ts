@@ -2,8 +2,11 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
-import { remark } from 'remark'
-import html from 'remark-html'
+import { unified } from 'unified'
+import remarkParse from 'remark-parse'
+import remarkRehype from 'remark-rehype'
+import rehypeHighlight from 'rehype-highlight'
+import rehypeStringify from 'rehype-stringify'
 
 const postsPath = path.join(process.cwd(), 'posts')
 
@@ -20,7 +23,7 @@ export function getAllPostSlugs() {
 }
 
 // TODO: Sort by date
-export function getAllPosts() {
+export function getAllPosts(): Post[] {
   const slugs = getAllPostSlugs()
   return getAllPostSlugs().map(slug => getPostBySlug(slug))
 }
@@ -43,7 +46,18 @@ export function getPostBySlug(slug: string): Post {
   }
 }
 
+export function getPostsByTag(tag: string): Post[] {
+  const posts = getAllPosts()
+
+  return posts.filter(post => post.tags.includes(tag))
+}
+
 export async function markdownToHtml(markdown: string) {
-  const content = await remark().use(html).process(markdown)
+  const content = await unified()
+    .use(remarkParse)
+    .use(remarkRehype)
+    .use(rehypeHighlight)
+    .use(rehypeStringify)
+    .process(markdown)
   return content.toString()
 }

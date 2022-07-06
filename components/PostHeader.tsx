@@ -10,9 +10,11 @@ type Props = {
 
 function PostHeader({ title, date, tags }: Props) {
   return (
-    <div className={styles.postHeader}>
+    <header className={styles.post_header}>
       <h1 className={styles.title}>{title}</h1>
-      <DateFormatter dateString={date} />
+      <div className={styles.date}>
+        <DateFormatter dateString={date} />
+      </div>
       <ul className={styles.tags}>
         {tags.map(tag => (
           <li key={tag}>
@@ -20,7 +22,7 @@ function PostHeader({ title, date, tags }: Props) {
           </li>
         ))}
       </ul>
-    </div>
+    </header>
   )
 }
 

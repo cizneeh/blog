@@ -9,7 +9,7 @@ type Props = {
 
 function PostContent({ post: { content, date, tags, title } }: Props) {
   return (
-    <article>
+    <article className={styles.post}>
       <PostHeader title={title} date={date} tags={tags} />
       <PostBody content={content} />
     </article>
