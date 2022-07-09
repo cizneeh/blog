@@ -1,0 +1,10 @@
+.nav li a {
+  border-radius: 0.5rem;
+  color: hsl(0, 0%, 60%);
+  font-weight: bold;
+}
+
+.nav li a:hover {
+  background-color: var(--main-font-color);
+  color: #333333;
+}

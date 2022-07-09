@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import DateFormatter from './DateFormatter'
+import DateFormatter from '../utils/DateFormatter'
 
 type Props = {
   title: string

@@ -1,6 +1,6 @@
 import { parseISO, format } from 'date-fns'
 import styles from './DateFormatter.module.css'
-import DateIcon from './icons/DateIcon'
+import DateIcon from '../icons/DateIcon'
 
 type Props = {
   dateString: string

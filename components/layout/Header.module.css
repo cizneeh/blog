@@ -1,0 +1,62 @@
+/* TODO: 今いるページに対応するnav項目の色変え */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.nav_menu_pc ul {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+.nav_menu_pc li a {
+  padding: 0.5rem 1rem;
+}
+
+.nav_mobile {
+  display: none;
+}
+
+.nav_button {
+  display: none;
+}
+
+.nav_menu_mobile {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .nav_menu_pc {
+    display: none;
+  }
+
+  .nav_button svg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .nav_button {
+    display: block;
+    background-color: inherit;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  .nav_menu_mobile {
+    display: block;
+  }
+
+  .nav_menu_mobile ul {
+    margin: 0;
+  }
+
+  .nav_menu_mobile li a {
+    display: block;
+    margin: 0 0.5rem;
+    padding: 0.5rem 0.5rem;
+  }
+}

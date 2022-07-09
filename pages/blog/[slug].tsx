@@ -1,8 +1,8 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
-import PostBody from '../../components/PostBody'
-import PostContent from '../../components/PostContent'
-import PostHeader from '../../components/PostHeader'
+import PostBody from '../../components/post/PostBody'
+import PostContent from '../../components/post/PostContent'
+import PostHeader from '../../components/post/PostHeader'
 import { getAllPostSlugs, getPostBySlug, Post, markdownToHtml } from '../../lib/post'
 
 type Props = {

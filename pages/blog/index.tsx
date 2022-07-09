@@ -1,7 +1,5 @@
 import { GetStaticProps } from 'next'
-import Link from 'next/link'
-import { listenerCount } from 'process'
-import PostList from '../../components/PostList'
+import PostList from '../../components/post/PostList'
 import { Post, getAllPosts } from '../../lib/post'
 
 type Props = {

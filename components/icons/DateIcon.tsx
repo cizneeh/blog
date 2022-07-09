@@ -1,5 +1,3 @@
-import React from 'react'
-
 function DateIcon() {
   return (
     <svg

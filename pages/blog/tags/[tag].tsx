@@ -1,5 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
-import PostList from '../../../components/PostList'
+import PostList from '../../../components/post/PostList'
 import { getAllPosts, getPostsByTag, Post } from '../../../lib/post'
 
 type Props = {

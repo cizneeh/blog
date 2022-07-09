@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next'
 import fs from 'fs/promises'
 import path from 'path'
-import WorkList from '../../components/WorkList'
+import WorkList from '../../components/page/WorkList'
 
 export type Work = {
   id: string
@@ -22,6 +22,7 @@ type Props = {
 function WorkPage({ works }: Props) {
   return (
     <>
+      <h1>作ったものたち</h1>
       <WorkList works={works} />
     </>
   )
