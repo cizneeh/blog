@@ -1,10 +1,11 @@
+import Layout from '../components/layout/Layout'
 import Home from '../components/page/Home'
 
-const HomePage = () => {
+function HomePage() {
   return (
-    <>
+    <Layout title="Home">
       <Home />
-    </>
+    </Layout>
   )
 }
 

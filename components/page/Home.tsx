@@ -27,14 +27,18 @@ function Home() {
           <h2>Links</h2>
           <ul className={styles.list}>
             <li>
-              <a href="https://twitter.com/cizneeh" target="_blank" rel="noreferrer">
-                Twitter
-              </a>
+              <address>
+                <a href="https://twitter.com/cizneeh" target="_blank" rel="noreferrer">
+                  Twitter
+                </a>
+              </address>
             </li>
             <li>
-              <a href="https://github.com/cizneeh" target="_blank" rel="noreferrer">
-                GitHub
-              </a>
+              <address>
+                <a href="https://github.com/cizneeh" target="_blank" rel="noreferrer">
+                  GitHub
+                </a>
+              </address>
             </li>
           </ul>
         </section>

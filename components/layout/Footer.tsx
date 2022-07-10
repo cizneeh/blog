@@ -7,12 +7,19 @@ function Footer() {
     <footer className={styles.footer}>
       <ul className={styles.icons}>
         <li>
-          <TwitterIcon />
+          <address>
+            <TwitterIcon />
+          </address>
         </li>
         <li>
-          <GithubIcon />
+          <address>
+            <GithubIcon />
+          </address>
         </li>
       </ul>
+      <p className={styles.copyright}>
+        <small>&copy; 2022 Echizen</small>
+      </p>
     </footer>
   )
 }

@@ -1,5 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
+import Layout from '../../components/layout/Layout'
 import PostBody from '../../components/post/PostBody'
 import PostContent from '../../components/post/PostContent'
 import PostHeader from '../../components/post/PostHeader'
@@ -11,14 +12,9 @@ type Props = {
 
 function PostPage({ post }: Props) {
   return (
-    <>
-      <Head>
-        <title>{post.title}</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        {/* TODO: OGP(いや要らないか) */}
-      </Head>
+    <Layout title={post.title}>
       <PostContent post={post} />
-    </>
+    </Layout>
   )
 }
 

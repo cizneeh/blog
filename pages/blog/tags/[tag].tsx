@@ -1,4 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
+import Layout from '../../../components/layout/Layout'
 import PostList from '../../../components/post/PostList'
 import { getAllPosts, getPostsByTag, Post } from '../../../lib/post'
 
@@ -9,10 +10,10 @@ type Props = {
 
 function TagPostPage({ tag, posts }: Props) {
   return (
-    <>
+    <Layout title={tag}>
       <h1>Tag: {tag}</h1>
       <PostList posts={posts} />
-    </>
+    </Layout>
   )
 }
 
