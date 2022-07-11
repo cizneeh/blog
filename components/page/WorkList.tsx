@@ -1,4 +1,4 @@
-import { Work } from '../pages/works'
+import { Work } from '../../pages/works'
 import WorkItem from './WorkItem'
 
 type Props = {
