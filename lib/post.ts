@@ -2,11 +2,9 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
-import { unified } from 'unified'
-import remarkParse from 'remark-parse'
-import remarkRehype from 'remark-rehype'
-import rehypeHighlight from 'rehype-highlight'
-import rehypeStringify from 'rehype-stringify'
+import remarkPrism from 'remark-prism'
+import { remark } from 'remark'
+import html from 'remark-html'
 
 const postsPath = path.join(process.cwd(), 'posts')
 
@@ -28,7 +26,7 @@ export function getAllPosts(): Post[] {
   return getAllPostSlugs().map(slug => getPostBySlug(slug))
 }
 
-// TODO: Modify the function so it only gets specified data, we don't need the post content for blog top page
+// TODO: Modify the function so it only gets specified data
 export function getPostBySlug(slug: string): Post {
   const fileContent = fs.readFileSync(path.join(postsPath, slug + '.md'), 'utf8')
   const matterResult = matter(fileContent)
@@ -52,12 +50,11 @@ export function getPostsByTag(tag: string): Post[] {
   return posts.filter(post => post.tags.includes(tag))
 }
 
+// TODO: show filename for code block
 export async function markdownToHtml(markdown: string) {
-  const content = await unified()
-    .use(remarkParse)
-    .use(remarkRehype)
-    .use(rehypeHighlight)
-    .use(rehypeStringify)
+  const content = await remark()
+    .use(html, { sanitize: false })
+    .use(remarkPrism, { plugins: [] })
     .process(markdown)
   return content.toString()
 }

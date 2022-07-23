@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import 'highlight.js/styles/default.css'
+import 'prismjs/themes/prism-tomorrow.css'
 import type { AppProps } from 'next/app'
 
 function MyApp({ Component, pageProps }: AppProps) {
