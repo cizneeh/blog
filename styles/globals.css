@@ -7,7 +7,7 @@
 html,
 body {
   font-size: 18px;
-  line-height: 1.6rem;
+  line-height: 1.8rem;
   background-color: var(--main-background-color);
   color: var(--main-font-color);
   padding: 0;
@@ -44,6 +44,10 @@ a {
 
 a:hover {
   color: white;
+}
+
+p {
+  margin: 1.5rem 0;
 }
 
 * {
