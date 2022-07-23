@@ -1,6 +1,6 @@
 :root {
-  --main-background-color: hsl(228, 28%, 7%);
-  --main-font-color: hsl(0, 0%, 75%);
+  --main-background-color: hsl(228, 25%, 14%);
+  --main-font-color: hsl(0, 0%, 76%);
   --font-color-lighter: hsl(0, 0%, 85%);
 }
 
@@ -14,6 +14,13 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+@media (max-width: 860px) {
+  html,
+  body {
+    font-size: 16px;
+  }
 }
 
 h1,
