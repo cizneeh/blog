@@ -19,7 +19,9 @@ function Home() {
               <Link href="/works">今までに作ったもの</Link>
             </li>
             <li>
-              <a href="https://cizneeh.github.io/resume/">職務経歴書</a>
+              <a href="https://cizneeh.github.io/resume/" target="_blank" rel="noreferrer">
+                職務経歴書
+              </a>
             </li>
           </ul>
         </section>

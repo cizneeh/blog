@@ -24,7 +24,9 @@ function WorkItem({ work }: Props) {
       ))}
       {work.githubUrl && (
         <p>
-          <a href={work.githubUrl}>GitHubで見る</a>
+          <a href={work.githubUrl} target="_blank" rel="noreferrer">
+            GitHubで見る
+          </a>
         </p>
       )}
     </li>
