@@ -1,5 +1,6 @@
 import { Work } from '../../pages/works'
 import Image from 'next/image'
+import styles from './WorkItem.module.css'
 
 type Props = {
   work: Work
@@ -8,7 +9,7 @@ type Props = {
 // TODO: 画像サイズちゃんと調整
 function WorkItem({ work }: Props) {
   return (
-    <li>
+    <li className={styles.work}>
       <h2>
         <a href={work.url}>{work.title}</a>
       </h2>
@@ -18,8 +19,8 @@ function WorkItem({ work }: Props) {
         </a>
       )}
       <p>使用技術: {work.techStack.join(', ')}</p>
-      {work.description.map(desc => (
-        <p key={work.id}>{desc}</p>
+      {work.description.map((desc, i) => (
+        <p key={i}>{desc}</p>
       ))}
       {work.githubUrl && (
         <p>

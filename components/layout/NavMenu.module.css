@@ -4,6 +4,10 @@
   font-weight: bold;
 }
 
+.active a {
+  color: white !important;
+}
+
 .nav li a:hover {
   background-color: var(--main-font-color);
   color: #333333;

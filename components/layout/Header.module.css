@@ -6,6 +6,10 @@
   padding: 0 1rem;
 }
 
+.header a {
+  text-decoration: none;
+}
+
 .nav_menu_pc ul {
   display: flex;
   gap: 1rem;

@@ -1,4 +1,9 @@
-.body h2 {
+.body h2,
+.body h3 {
+  margin-top: 3rem;
+}
+
+.body h3 {
   margin-top: 3rem;
 }
 
