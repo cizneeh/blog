@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import ExternalLinkIcon from '../icons/ExternalLinkIcon'
 import styles from './Home.module.css'
 
 function Home() {
@@ -22,6 +23,7 @@ function Home() {
               <a href="https://cizneeh.github.io/resume/" target="_blank" rel="noreferrer">
                 職務経歴書
               </a>
+              <ExternalLinkIcon />
             </li>
           </ul>
         </section>
@@ -33,6 +35,7 @@ function Home() {
                 <a href="https://twitter.com/cizneeh" target="_blank" rel="noreferrer">
                   Twitter
                 </a>
+                <ExternalLinkIcon />
               </address>
             </li>
             <li>
@@ -40,6 +43,7 @@ function Home() {
                 <a href="https://github.com/cizneeh" target="_blank" rel="noreferrer">
                   GitHub
                 </a>
+                <ExternalLinkIcon />
               </address>
             </li>
           </ul>

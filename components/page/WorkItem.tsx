@@ -1,6 +1,7 @@
 import { Work } from '../../pages/works'
 import Image from 'next/image'
 import styles from './WorkItem.module.css'
+import ExternalLinkIcon from '../icons/ExternalLinkIcon'
 
 type Props = {
   work: Work
@@ -27,6 +28,7 @@ function WorkItem({ work }: Props) {
           <a href={work.githubUrl} target="_blank" rel="noreferrer">
             GitHubで見る
           </a>
+          <ExternalLinkIcon />
         </p>
       )}
     </li>

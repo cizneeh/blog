@@ -2,3 +2,8 @@
   padding-left: 1.5rem;
   list-style: circle;
 }
+
+.home svg {
+  width: 1rem;
+  vertical-align: middle;
+}

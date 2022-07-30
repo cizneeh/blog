@@ -2,3 +2,8 @@
 .work h3 {
   margin-top: 3rem;
 }
+
+.work svg {
+  width: 1rem;
+  vertical-align: middle;
+}
