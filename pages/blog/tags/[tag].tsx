@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
 
-import Layout from '../../../components/layout/Layout'
+import Layout from '../../../app/layout/Layout'
 import PostList from '../../../components/post/PostList'
 import { getAllPosts, getPostsByTag, Post } from '../../../lib/post'
 
@@ -44,7 +44,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   const tags = Array.from(new Set(tagsTmp))
 
-  const paths = tags.map(tag => ({ params: { tag } }))
+  const paths = tags.map((tag) => ({ params: { tag } }))
 
   return {
     paths,

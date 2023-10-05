@@ -3,7 +3,7 @@ import path from 'path'
 
 import { GetStaticProps } from 'next'
 
-import Layout from '../../components/layout/Layout'
+import Layout from '../../app/layout/Layout'
 import WorkList from '../../components/page/WorkList'
 
 export type Work = {
@@ -36,12 +36,10 @@ export default WorkPage
 export const getStaticProps: GetStaticProps = async () => {
   const worksDirPath = path.join(process.cwd(), 'works')
   const workFileNames = await fs.readdir(worksDirPath)
-  const workFiles = workFileNames.map(filename => filename.replace(/\.ts$/, ''))
+  const workFiles = workFileNames.map((filename) => filename.replace(/\.ts$/, ''))
 
-  const worksRaw = await Promise.all(workFiles.map(file => import(`../../works/${file}`)))
-  const works: Work[] = worksRaw
-    .map(work => work.default)
-    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
+  const worksRaw = await Promise.all(workFiles.map((file) => import(`../../works/${file}`)))
+  const works: Work[] = worksRaw.map((work) => work.default).sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
 
   return {
     props: { works },

@@ -1,7 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
 
-import Layout from '../../components/layout/Layout'
+import Layout from '../../app/layout/Layout'
 import PostBody from '../../components/post/PostBody'
 import PostContent from '../../components/post/PostContent'
 import PostHeader from '../../components/post/PostHeader'
