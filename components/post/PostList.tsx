@@ -1,4 +1,5 @@
 import { Post } from '../../lib/post'
+
 import PostCard from './PostCard'
 
 type Props = {

@@ -1,5 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
+
 import Layout from '../../components/layout/Layout'
 import PostBody from '../../components/post/PostBody'
 import PostContent from '../../components/post/PostContent'
@@ -36,7 +37,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({ params }) 
 export const getStaticPaths: GetStaticPaths = async () => {
   const slugs = getAllPostSlugs()
 
-  const paths = slugs.map(slug => ({ params: { slug } }))
+  const paths = slugs.map((slug) => ({ params: { slug } }))
 
   return {
     paths,

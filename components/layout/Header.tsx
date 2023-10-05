@@ -1,8 +1,10 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
+
 import HamburgerIcon from '../icons/HamburgerIcon'
 import XIcon from '../icons/XIcon'
+
 import styles from './Header.module.css'
 import NavMenu from './NavMenu'
 

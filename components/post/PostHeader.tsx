@@ -1,5 +1,7 @@
 import Link from 'next/link'
+
 import DateFormatter from '../utils/DateFormatter'
+
 import styles from './PostHeader.module.css'
 
 type Props = {

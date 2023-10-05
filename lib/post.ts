@@ -1,10 +1,10 @@
 import fs from 'fs'
 import path from 'path'
-import matter from 'gray-matter'
 
-import remarkPrism from 'remark-prism'
+import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
+import remarkPrism from 'remark-prism'
 
 const postsPath = path.join(process.cwd(), 'posts')
 

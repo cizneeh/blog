@@ -1,8 +1,10 @@
-import { Post } from '../../lib/post'
-import PostBody from './PostBody'
-import PostHeader from './PostHeader'
-import styles from './PostContent.module.css'
 import Link from 'next/link'
+
+import { Post } from '../../lib/post'
+
+import PostBody from './PostBody'
+import styles from './PostContent.module.css'
+import PostHeader from './PostHeader'
 
 type Props = {
   post: Post

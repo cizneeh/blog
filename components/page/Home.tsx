@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
+
 import ExternalLinkIcon from '../icons/ExternalLinkIcon'
+
 import styles from './Home.module.css'
 
 function Home() {

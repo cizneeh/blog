@@ -1,6 +1,8 @@
 import Link from 'next/link'
+
 import { Post } from '../../lib/post'
 import DateFormatter from '../utils/DateFormatter'
+
 import styles from './PostCard.module.css'
 
 type Props = {

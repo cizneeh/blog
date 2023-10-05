@@ -1,8 +1,10 @@
-import { GetStaticProps } from 'next'
 import fs from 'fs/promises'
 import path from 'path'
-import WorkList from '../../components/page/WorkList'
+
+import { GetStaticProps } from 'next'
+
 import Layout from '../../components/layout/Layout'
+import WorkList from '../../components/page/WorkList'
 
 export type Work = {
   id: string
