@@ -31,6 +31,7 @@ export const fetchPosts = async (): Promise<Work[]> => {
   const workFileNames = await fs.readdir(worksDirPath)
   const workFiles = workFileNames.map((filename) => filename.replace(/\.ts$/, ''))
 
+  // TODO: 型
   const worksRaw = await Promise.all(workFiles.map((file) => import(`../../works/${file}`)))
   return worksRaw.map((work) => work.default).sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
 }
