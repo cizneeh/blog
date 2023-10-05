@@ -1,9 +1,6 @@
 import fs from 'fs/promises'
 import path from 'path'
 
-import { GetStaticProps } from 'next'
-
-import Layout from '../../components/layout/Layout'
 import WorkList from '../../components/page/WorkList'
 
 export type Work = {
@@ -18,30 +15,22 @@ export type Work = {
   githubUrl?: string
 }
 
-type Props = {
-  works: Work[]
-}
+export default async function WorkPage() {
+  const works = await fetchPosts()
 
-function WorkPage({ works }: Props) {
   return (
-    <Layout title="Works">
+    <>
       <h1>作ったものたち</h1>
       <WorkList works={works} />
-    </Layout>
+    </>
   )
 }
 
-export default WorkPage
-
-export const getStaticProps: GetStaticProps = async () => {
+export const fetchPosts = async (): Promise<Work[]> => {
   const worksDirPath = path.join(process.cwd(), 'works')
   const workFileNames = await fs.readdir(worksDirPath)
   const workFiles = workFileNames.map((filename) => filename.replace(/\.ts$/, ''))
 
   const worksRaw = await Promise.all(workFiles.map((file) => import(`../../works/${file}`)))
-  const works: Work[] = worksRaw.map((work) => work.default).sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
-
-  return {
-    props: { works },
-  }
+  return worksRaw.map((work) => work.default).sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
 }
