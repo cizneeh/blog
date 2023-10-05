@@ -3,8 +3,9 @@ import 'prismjs/themes/prism-tomorrow.css'
 import { Metadata } from 'next'
 import { ReactNode } from 'react'
 
-import Footer from './layout/Footer'
-import Header from './layout/Header'
+import Footer from '../components/layout/Footer'
+import Header from '../components/layout/Header'
+
 import styles from './layout/Layout.module.css'
 
 type Props = {

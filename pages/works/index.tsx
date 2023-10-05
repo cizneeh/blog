@@ -3,7 +3,7 @@ import path from 'path'
 
 import { GetStaticProps } from 'next'
 
-import Layout from '../../app/layout/Layout'
+import Layout from '../../components/layout/Layout'
 import WorkList from '../../components/page/WorkList'
 
 export type Work = {

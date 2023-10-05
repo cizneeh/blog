@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
 
-import Layout from '../../../app/layout/Layout'
+import Layout from '../../../components/layout/Layout'
 import PostList from '../../../components/post/PostList'
 import { getAllPosts, getPostsByTag, Post } from '../../../lib/post'
 
