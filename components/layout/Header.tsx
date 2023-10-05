@@ -9,6 +9,7 @@ import XIcon from '../icons/XIcon'
 import styles from './Header.module.css'
 import NavMenu from './NavMenu'
 
+// TODO: モバイル用メニューの再実装
 function Header() {
   const router = useRouter()
   // const [navActive, setNavActive] = useState(false)

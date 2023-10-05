@@ -5,8 +5,7 @@ import { ReactNode } from 'react'
 
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
-
-import styles from './layout/Layout.module.css'
+import styles from '../components/layout/Layout.module.css'
 
 type Props = {
   children: ReactNode
@@ -19,11 +18,14 @@ export const metadata: Metadata = {
 
 function Layout({ children }: Props) {
   return (
-    <>
-      <Header />
-      <main className={styles.container}>{children}</main>
-      <Footer />
-    </>
+    // rootレイアウトではhtmlタグとbodyタグが必須
+    <html lang="jp">
+      <body>
+        <Header />
+        <main className={styles.container}>{children}</main>
+        <Footer />
+      </body>
+    </html>
   )
 }
 

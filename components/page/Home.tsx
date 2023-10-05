@@ -1,17 +1,17 @@
-import Head from 'next/head'
 import Link from 'next/link'
 
 import ExternalLinkIcon from '../icons/ExternalLinkIcon'
 
 import styles from './Home.module.css'
 
-function Home() {
+export const HomePage = () => {
   return (
     <>
-      <Head>
+      {/* TODO: これいらんよな？ */}
+      {/* <Head>
         <title>Echizen no Blog</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
+      </Head> */}
       <article className={styles.home}>
         <h1>Shinjiro Echizen</h1>
         <section>
@@ -48,5 +48,3 @@ function Home() {
     </>
   )
 }
-
-export default Home

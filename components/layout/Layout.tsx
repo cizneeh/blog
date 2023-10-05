@@ -10,6 +10,7 @@ type Props = {
   title?: string
 }
 
+// TODO: App Routerへの以降が完了したら消す
 function Layout({ children, title }: Props) {
   return (
     <>
