@@ -51,8 +51,8 @@ dependencies:
     specifier: ^11.0.0
     version: 11.0.0
   unified:
-    specifier: ^10.1.2
-    version: 10.1.2
+    specifier: ^11.0.3
+    version: 11.0.3
 
 devDependencies:
   '@types/node':
