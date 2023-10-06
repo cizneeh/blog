@@ -3,6 +3,7 @@ import path from 'path'
 
 import WorkList from '../../components/page/WorkList'
 
+// TODO: 型どっかにまとめる
 export type Work = {
   id: string
   title: string

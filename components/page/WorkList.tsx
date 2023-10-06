@@ -1,4 +1,4 @@
-import { Work } from '../../pages/works'
+import { Work } from '../../app/works/page'
 
 import WorkItem from './WorkItem'
 
@@ -9,7 +9,7 @@ type Props = {
 function WorkList({ works }: Props) {
   return (
     <ul>
-      {works.map(work => (
+      {works.map((work) => (
         <WorkItem key={work.title} work={work} />
       ))}
     </ul>

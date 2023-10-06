@@ -1,4 +1,4 @@
-import { Work } from '../pages/works'
+import { Work } from '../app/works/page'
 
 const website: Work = {
   id: 'website',
