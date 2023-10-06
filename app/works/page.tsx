@@ -27,7 +27,7 @@ export default async function WorkPage() {
   )
 }
 
-export const fetchPosts = async (): Promise<Work[]> => {
+const fetchPosts = async (): Promise<Work[]> => {
   const worksDirPath = path.join(process.cwd(), 'works')
   const workFileNames = await fs.readdir(worksDirPath)
   const workFiles = workFileNames.map((filename) => filename.replace(/\.ts$/, ''))
