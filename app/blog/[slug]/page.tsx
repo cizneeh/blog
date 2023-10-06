@@ -12,7 +12,7 @@ export default async function PostPage({ params }: { params: Params }) {
 }
 
 // TODO: 型をいい感じにつけたい
-export const getPost = async (params: Params): Promise<Post> => {
+const getPost = async (params: Params): Promise<Post> => {
   const post = getPostBySlug(params.slug)
   post.content = await markdownToHtml(post.content)
   return post
