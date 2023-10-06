@@ -20,7 +20,7 @@ function PostCard({ post: { title, tags, date, slug, content } }: Props) {
       </h2>
       <DateFormatter dateString={date} />
       <ul className={styles.tags}>
-        {tags.map(tag => (
+        {tags.map((tag) => (
           <li key={tag}>
             <Link href={`/blog/tags/${tag}`}>{`#${tag}`}</Link>
           </li>
