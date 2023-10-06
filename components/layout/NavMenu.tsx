@@ -1,12 +1,15 @@
 import Link from 'next/link'
-import { useRouter } from 'next/router'
+import { useRouter, usePathname } from 'next/navigation'
+
 import styles from './NavMenu.module.css'
 
 function NavMenu() {
   type Menu = 'home' | 'works' | 'blog'
 
-  const router = useRouter()
-  const path = router.pathname.match(/([^/]+?)?$/)![0]
+  const pathname = usePathname()
+  if (!pathname) return null
+  // TODO: 何してんのこれ
+  const path = pathname.match(/([^/]+?)?$/)![0]
   const currentMenu = (path || 'home') as Menu
 
   return (

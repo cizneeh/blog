@@ -4,6 +4,7 @@ type Props = {
   title?: string
 }
 
+// TODO: app routerへの移行が完了したら消す
 function MyHead({ title }: Props) {
   const description = `Shinjiro Echizen's website/blog`
   const url = 'https://cizneeh.me'
