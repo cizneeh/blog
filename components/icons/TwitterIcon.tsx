@@ -1,14 +1,10 @@
-'use client'
-import { IconContext } from 'react-icons'
-import { FaTwitter } from 'react-icons/fa'
+import { FaSquareXTwitter } from 'react-icons/fa6'
 
 function TwitterIcon() {
   return (
-    <IconContext.Provider value={{ size: '2rem' }}>
-      <a href="https://twitter.com/cizneeh" target="_blank" rel="noreferrer">
-        <FaTwitter />
-      </a>
-    </IconContext.Provider>
+    <a href="https://twitter.com/cizneeh" target="_blank" rel="noreferrer">
+      <FaSquareXTwitter size="2rem" />
+    </a>
   )
 }
 
