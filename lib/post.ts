@@ -2,14 +2,9 @@ import fs from 'fs'
 import path from 'path'
 
 import matter from 'gray-matter'
-import rehypeStringify from 'rehype-stringify'
-// TODO: unifiedとの違い？
 import { remark } from 'remark'
-import remarkHtml from 'remark-html'
-import remarkParse from 'remark-parse'
+import html from 'remark-html'
 import remarkPrism from 'remark-prism'
-import remarkRehype from 'remark-rehype'
-import { unified } from 'unified'
 
 const postsPath = path.join(process.cwd(), 'posts')
 
@@ -48,13 +43,12 @@ export const getPostsByTag = (tag: string): Post[] => getAllPosts().filter((post
 // TODO: コードブロックのファイル名表示とハイライト
 // TODO: マークダウン扱うのにもっと良い方法ないかな
 export async function markdownToHtml(markdown: string) {
-  const content = await unified()
-    .use(remarkParse)
-    .use(remarkRehype)
-    // TODO: 型の問題だけっぽい https://github.com/orgs/rehypejs/discussions/63#discussioncomment-1123797
-    // のでとりあえず無視
+  // unified()との違いってなんなん
+  const content = await remark()
+    // FIXME: 型の問題だけっぽいのでとりあえず無視
+    // https://github.com/orgs/rehypejs/discussions/63#discussioncomment-1123797
     // @ts-expect-error
-    .use(rehypeStringify)
+    .use(html, { sanitize: false })
     // TODO: app routerにしたらENOENTと言われる, page routerだと動く
     // .use(remarkPrism, { plugins: [] })
     .process(markdown)
