@@ -9,7 +9,7 @@ type Props = {
 function PostList({ posts }: Props) {
   return (
     <ul>
-      {posts.map(post => (
+      {posts.map((post) => (
         <PostCard post={post} key={post.slug} />
       ))}
     </ul>
