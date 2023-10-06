@@ -45,9 +45,6 @@ export const getPostsByTag = (tag: string): Post[] => getAllPosts().filter((post
 export async function markdownToHtml(markdown: string) {
   // unified()との違いってなんなん
   const content = await remark()
-    // FIXME: 型の問題だけっぽいのでとりあえず無視
-    // https://github.com/orgs/rehypejs/discussions/63#discussioncomment-1123797
-    // @ts-expect-error
     .use(html, { sanitize: false })
     // TODO: app routerにしたらENOENTと言われる, page routerだと動く
     // .use(remarkPrism, { plugins: [] })
