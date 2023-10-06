@@ -12,9 +12,9 @@ import NavMenu from './NavMenu'
 // TODO: モバイル用メニューの再実装
 function Header() {
   const router = useRouter()
-  // const [navActive, setNavActive] = useState(false)
+  const [navActive, setNavActive] = useState(false)
 
-  // // set the mobile nav menu hidden after navigating a page
+  // TODO: 遷移後にメニューを閉じる
   // const handleComplete = () => {
   //   setNavActive(false)
   // }
@@ -26,9 +26,9 @@ function Header() {
   //   }
   // }, [])
 
-  // function toggelNavVisibility() {
-  //   setNavActive(!navActive)
-  // }
+  function toggelNavVisibility() {
+    setNavActive(!navActive)
+  }
 
   return (
     <header>
@@ -41,16 +41,16 @@ function Header() {
           <NavMenu />
         </div>
 
-        {/* <button className={styles.nav_button} onClick={toggelNavVisibility}>
+        <button className={styles.nav_button} onClick={toggelNavVisibility}>
           {navActive ? <XIcon /> : <HamburgerIcon />}
-        </button> */}
+        </button>
       </div>
 
-      {/* {navActive && (
+      {navActive && (
         <div className={styles.nav_menu_mobile}>
           <NavMenu />
         </div>
-      )} */}
+      )}
     </header>
   )
 }
