@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "pnpm tsc --noEmit && next lint",
+    "lint": "pnpm tsc --noEmit && prettier --check . && next lint",
     "format": "prettier --write ."
   },
   "dependencies": {
