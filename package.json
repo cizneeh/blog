@@ -7,7 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "pnpm tsc --noEmit && prettier --check . && next lint",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "date-fns": "^2.30.0",
@@ -35,6 +36,7 @@
     "eslint": "^8.50.0",
     "eslint-config-next": "^13.5.4",
     "eslint-plugin-import": "^2.28.1",
+    "prettier": "^3.0.3",
     "typescript": "^5.2.2"
   },
   "engines": {

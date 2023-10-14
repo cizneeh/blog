@@ -16,14 +16,19 @@ export type Post = {
   content: string
 }
 
-export const getAllPostSlugs = () => fs.readdirSync(postsPath).map((slug) => slug.replace(/\.md$/, ''))
+export const getAllPostSlugs = () =>
+  fs.readdirSync(postsPath).map((slug) => slug.replace(/\.md$/, ''))
 
 // TODO: sort by date
-export const getAllPosts = (): Post[] => getAllPostSlugs().map((slug) => getPostBySlug(slug))
+export const getAllPosts = (): Post[] =>
+  getAllPostSlugs().map((slug) => getPostBySlug(slug))
 
 // TODO: 指定したデータだけ取得する
 export const getPostBySlug = (slug: string): Post => {
-  const fileContent = fs.readFileSync(path.join(postsPath, slug + '.md'), 'utf8')
+  const fileContent = fs.readFileSync(
+    path.join(postsPath, slug + '.md'),
+    'utf8',
+  )
   const {
     data: { title, date, tags },
     content,
@@ -38,7 +43,8 @@ export const getPostBySlug = (slug: string): Post => {
   }
 }
 
-export const getPostsByTag = (tag: string): Post[] => getAllPosts().filter((post) => post.tags.includes(tag))
+export const getPostsByTag = (tag: string): Post[] =>
+  getAllPosts().filter((post) => post.tags.includes(tag))
 
 // TODO: コードブロックのファイル名表示とハイライト
 // TODO: マークダウン扱うのにもっと良い方法ないかな

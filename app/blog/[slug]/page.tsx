@@ -1,5 +1,10 @@
 import PostContent from '../../../components/post/PostContent'
-import { getAllPostSlugs, getPostBySlug, Post, markdownToHtml } from '../../../lib/post'
+import {
+  getAllPostSlugs,
+  getPostBySlug,
+  Post,
+  markdownToHtml,
+} from '../../../lib/post'
 
 type Params = {
   slug: string
@@ -20,4 +25,5 @@ const getPost = async (params: Params): Promise<Post> => {
 
 // TODO: getStaticPropsは GetStaticPropsという型があったがgStaticParamsにはない？
 // 全ての記事のslugを取得する
-export const generateStaticParams = (): Params[] => getAllPostSlugs().map((slug) => ({ slug }))
+export const generateStaticParams = (): Params[] =>
+  getAllPostSlugs().map((slug) => ({ slug }))

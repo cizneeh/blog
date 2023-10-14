@@ -10,7 +10,10 @@ export const HomePage = () => {
       <h1>Shinjiro Echizen</h1>
       <section>
         <h2>About Me</h2>
-        <p>Webエンジニアです。Node.js, React, TypeScriptを触っていることが多いです。</p>
+        <p>
+          Webエンジニアです。Node.js, React,
+          TypeScriptを触っていることが多いです。
+        </p>
         <ul className={styles.list}>
           <li>
             <Link href="/works">今までに作ったもの</Link>
@@ -22,7 +25,11 @@ export const HomePage = () => {
         <ul className={styles.list}>
           <li>
             <address>
-              <a href="https://twitter.com/cizneeh" target="_blank" rel="noreferrer">
+              <a
+                href="https://twitter.com/cizneeh"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Twitter
               </a>
               <ExternalLinkIcon />
@@ -30,7 +37,11 @@ export const HomePage = () => {
           </li>
           <li>
             <address>
-              <a href="https://github.com/cizneeh" target="_blank" rel="noreferrer">
+              <a
+                href="https://github.com/cizneeh"
+                target="_blank"
+                rel="noreferrer"
+              >
                 GitHub
               </a>
               <ExternalLinkIcon />

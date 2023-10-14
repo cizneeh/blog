@@ -12,7 +12,12 @@
       "groupName": "all minor and patch dependencies"
     },
     {
-      "matchPackageNames": ["react", "@types/react", "react-dom", "@types/react-dom"],
+      "matchPackageNames": [
+        "react",
+        "@types/react",
+        "react-dom",
+        "@types/react-dom"
+      ],
       "groupName": "react"
     }
   ],

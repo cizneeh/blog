@@ -18,7 +18,12 @@ function WorkItem({ work }: Props) {
       </h2>
       {work.thumbnailUrl && (
         <a href={work.url}>
-          <Image src={`/${work.thumbnailUrl}`} alt={work.title} width={600} height={400} />
+          <Image
+            src={`/${work.thumbnailUrl}`}
+            alt={work.title}
+            width={600}
+            height={400}
+          />
         </a>
       )}
       <p>使用技術: {work.techStack.join(', ')}</p>
