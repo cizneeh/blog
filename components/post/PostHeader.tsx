@@ -18,7 +18,7 @@ function PostHeader({ title, date, tags }: Props) {
         <DateFormatter dateString={date} />
       </div>
       <ul className={styles.tags}>
-        {tags.map(tag => (
+        {tags.map((tag) => (
           <li key={tag}>
             <Link href={`/blog/tags/${tag}`}>{`#${tag}`}</Link>
           </li>

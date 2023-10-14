@@ -5,7 +5,12 @@ type Props = {
 }
 
 function PostBody({ content }: Props) {
-  return <div className={styles.body} dangerouslySetInnerHTML={{ __html: content }}></div>
+  return (
+    <div
+      className={styles.body}
+      dangerouslySetInnerHTML={{ __html: content }}
+    ></div>
+  )
 }
 
 export default PostBody
