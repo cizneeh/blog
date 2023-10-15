@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['next/core-web-vitals', 'plugin:import/typescript'],
+  extends: ['next/core-web-vitals'],
   rules: {
     'import/first': 'error',
     'import/newline-after-import': 'error',
