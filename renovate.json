@@ -2,5 +2,28 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["github>cizneeh/renovate-config:auto.json5"],
   "enabledManagers": ["github-actions", "npm"],
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["^re(mark|hype).*"],
+      "matchPackageNames": ["unified"],
+      "groupName": "unified"
+    },
+    {
+      "matchPackageNames": [
+        "react",
+        "@types/react",
+        "react-dom",
+        "@types/react-dom"
+      ],
+      "groupName": "react"
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "groupName": "major",
+      "automerge": false,
+      "assignees": ["cizneeh"],
+      "assigneesSampleSize": 1
+    }
+  ],
   "postUpdateOptions": ["pnpmDedupe"]
 }
