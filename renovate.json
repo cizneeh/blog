@@ -18,6 +18,20 @@
       "groupName": "react"
     },
     {
+      "matchPackageNames": ["@types/node", "node"],
+      "description": "nodeはデプロイ先のvercelの対応の問題があるので、dependency dashboardからのみPRを手動で作るようにする",
+      "dependencyDashboardApproval": true,
+      "automerge": false,
+      "groupName": "node"
+    },
+    {
+      "matchPackageNames": ["next"],
+      "matchUpdateTypes": ["major"],
+      "automerge": false,
+      "assignees": ["cizneeh"],
+      "groupName": "next"
+    },
+    {
       "matchUpdateTypes": ["major"],
       "groupName": "major",
       "automerge": false,
