@@ -19,6 +19,7 @@
     },
     {
       "matchPackageNames": ["@types/node", "node"],
+      "matchUpdateTypes": ["major"],
       "description": "nodeはデプロイ先のvercelの対応の問題があるので、dependency dashboardからのみPRを手動で作るようにする",
       "dependencyDashboardApproval": true,
       "automerge": false,
