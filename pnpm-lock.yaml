@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   date-fns:
-    specifier: ^3.0.0
-    version: 3.0.0
+    specifier: ^3.0.1
+    version: 3.0.1
   gray-matter:
     specifier: ^4.0.3
     version: 4.0.3
@@ -755,8 +755,8 @@ packages:
       whatwg-url: 8.7.0
     dev: false
 
-  /date-fns@3.0.0:
-    resolution: {integrity: sha512-xjDz3rNN9jp+Lh3P/4MeY4E5HkaRnEnrJCcrdRZnKdn42gJlIe6hwrrwVXePRwVR2kh1UcMnz00erYBnHF8PFA==}
+  /date-fns@3.0.1:
+    resolution: {integrity: sha512-cr9igCUa0QSqgAMj7JOrYTY6Nh1rmyGrFDko7ADqfmaQqP/I2N4rlfrLl7AWuzDaoIpz6MNjoEcTPzgZYIrhnA==}
     dev: false
 
   /debug@3.2.7:
