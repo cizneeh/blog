@@ -56,8 +56,8 @@ dependencies:
 
 devDependencies:
   '@types/node':
-    specifier: 18.19.29
-    version: 18.19.29
+    specifier: 18.19.30
+    version: 18.19.30
   '@types/react':
     specifier: 18.2.74
     version: 18.2.74
@@ -325,8 +325,8 @@ packages:
   /@types/ms@0.7.32:
     resolution: {integrity: sha512-xPSg0jm4mqgEkNhowKgZFBNtwoEwF6gJ4Dhww+GFpm3IgtNseHQZ5IqdNwnquZEoANxyDAKDRAdVo4Z72VvD/g==}
 
-  /@types/node@18.19.29:
-    resolution: {integrity: sha512-5pAX7ggTmWZdhUrhRWLPf+5oM7F80bcKVCBbr0zwEkTNzTJL2CWQjznpFgHYy6GrzkYi2Yjy7DHKoynFxqPV8g==}
+  /@types/node@18.19.30:
+    resolution: {integrity: sha512-453z1zPuJLVDbyahaa1sSD5C2sht6ZpHp5rgJNs+H8YGqhluCXcuOUmBYsAo0Tos0cHySJ3lVUGbGgLlqIkpyg==}
     dependencies:
       undici-types: 5.26.5
     dev: true
