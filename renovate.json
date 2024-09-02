@@ -4,8 +4,7 @@
   "enabledManagers": ["github-actions", "npm"],
   "packageRules": [
     {
-      "matchPackagePatterns": ["^re(mark|hype).*"],
-      "matchPackageNames": ["unified"],
+      "matchPackageNames": ["unified", "/^re(mark|hype).*/"],
       "groupName": "unified"
     },
     {
@@ -34,11 +33,11 @@
     },
     {
       "matchUpdateTypes": ["major"],
-      "excludePackageNames": ["@types/node", "node", "next"],
       "groupName": "major",
       "automerge": false,
       "assignees": ["cizneeh"],
-      "assigneesSampleSize": 1
+      "assigneesSampleSize": 1,
+      "matchPackageNames": ["!@types/node", "!node", "!next"]
     }
   ],
   "postUpdateOptions": ["pnpmDedupe"]
