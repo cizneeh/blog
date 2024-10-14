@@ -17,11 +17,10 @@
       "groupName": "react"
     },
     {
-      "matchPackageNames": ["@types/node", "node"],
+      "matchPackageNames": ["@types/node", "node", "npm"],
       "description": "nodeはデプロイ先のvercelの対応の問題があるので、dependency dashboardからのみPRを手動で作るようにする",
       "dependencyDashboardApproval": true,
-      "groupName": "node",
-      "enabled": false
+      "groupName": "node"
     },
     {
       "matchPackageNames": ["next"],
