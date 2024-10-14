@@ -17,4 +17,4 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Run lint
-        run: pnpm lint
+        run: npm run lint
