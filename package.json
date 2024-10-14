@@ -3,11 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "pnpm tsc --noEmit && biome check .",
+    "lint": "tsc --noEmit && biome check .",
     "lint:write": "biome check --write .",
     "lint:write:unsafe": "biome check --write --unsafe ."
   },
@@ -38,7 +37,7 @@
     "typescript": "^5.6.3"
   },
   "engines": {
-    "node": "20.18.0"
+    "node": "20"
   },
-  "packageManager": "pnpm@9.12.1"
+  "packageManager": "npm@8.3.0"
 }
