@@ -1,5 +1,5 @@
-import fs from 'fs'
-import path from 'path'
+import fs from 'node:fs'
+import path from 'node:path'
 
 import matter from 'gray-matter'
 import { remark } from 'remark'
@@ -26,7 +26,7 @@ export const getAllPosts = (): Post[] =>
 // TODO: 指定したデータだけ取得する
 export const getPostBySlug = (slug: string): Post => {
   const fileContent = fs.readFileSync(
-    path.join(postsPath, slug + '.md'),
+    path.join(postsPath, `${slug}.md`),
     'utf8',
   )
   const {

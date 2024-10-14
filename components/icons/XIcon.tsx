@@ -8,6 +8,7 @@ function XIcon() {
       stroke="currentColor"
       strokeWidth={2}
     >
+      <title>close button</title>
       <path
         strokeLinecap="round"
         strokeLinejoin="round"

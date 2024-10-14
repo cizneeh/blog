@@ -9,6 +9,7 @@ function NavMenu() {
   const pathname = usePathname()
   if (!pathname) return null
   // TODO: 何してんのこれ
+  // biome-ignore lint: a
   const path = pathname.match(/([^/]+?)?$/)![0]
   const currentMenu = (path || 'home') as Menu
 

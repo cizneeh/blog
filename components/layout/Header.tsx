@@ -41,7 +41,11 @@ function Header() {
           <NavMenu />
         </div>
 
-        <button className={styles.nav_button} onClick={toggelNavVisibility}>
+        <button
+          type="button"
+          className={styles.nav_button}
+          onClick={toggelNavVisibility}
+        >
           {navActive ? <XIcon /> : <HamburgerIcon />}
         </button>
       </div>

@@ -28,6 +28,7 @@ function WorkItem({ work }: Props) {
       )}
       <p>使用技術: {work.techStack.join(', ')}</p>
       {work.description.map((desc, i) => (
+        // biome-ignore lint: a
         <p key={i}>{desc}</p>
       ))}
       {work.githubUrl && (

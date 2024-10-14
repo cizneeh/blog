@@ -39,5 +39,5 @@ const cropLimit = 130
 // 初めのheadingに到達するか、一定文字数に達するまで
 function cropContent(markdownStr: string) {
   const markdownIndex = markdownStr.indexOf('#')
-  return markdownStr.substring(0, Math.min(markdownIndex, cropLimit)) + '...'
+  return `${markdownStr.substring(0, Math.min(markdownIndex, cropLimit))}...`
 }

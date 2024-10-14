@@ -8,6 +8,7 @@ function ExternalLinkIcon() {
       stroke="currentColor"
       strokeWidth={2}
     >
+      <title>external link</title>
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
