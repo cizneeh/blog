@@ -1,8 +1,8 @@
 import '../styles/globals.css'
 import 'prismjs/themes/prism-tomorrow.css'
-import { Metadata } from 'next'
-import { ReactNode } from 'react'
+import type { Metadata } from 'next'
 
+import type { ReactNode } from 'react'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import styles from '../components/layout/Layout.module.css'
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 function Layout({ children }: Props) {
   return (
     // rootレイアウトではhtmlタグとbodyタグが必須
-    <html lang="jp">
+    <html lang="ja">
       <body>
         <Header />
         <main className={styles.container}>{children}</main>

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { Work } from '../../app/works/page'
+import type { Work } from '../../app/works/page'
 import ExternalLinkIcon from '../icons/ExternalLinkIcon'
 
 import styles from './WorkItem.module.css'

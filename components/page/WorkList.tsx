@@ -1,4 +1,4 @@
-import { Work } from '../../app/works/page'
+import type { Work } from '../../app/works/page'
 
 import WorkItem from './WorkItem'
 
