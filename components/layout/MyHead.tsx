@@ -8,7 +8,7 @@ type Props = {
 function MyHead({ title }: Props) {
   const description = `Shinjiro Echizen's website/blog`
   const url = 'https://cizneeh.me'
-  const siteName = `Shinjiro Echizen website`
+  const siteName = 'Shinjiro Echizen website'
   const twitterId = 'cizneeh'
   const siteTitle = title ? `${title} | Echizen` : siteName
 

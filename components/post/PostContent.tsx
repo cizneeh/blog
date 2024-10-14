@@ -1,7 +1,6 @@
 import Link from 'next/link'
 
-import { Post } from '../../lib/post'
-
+import type { Post } from '../../lib/post'
 import PostBody from './PostBody'
 import styles from './PostContent.module.css'
 import PostHeader from './PostHeader'

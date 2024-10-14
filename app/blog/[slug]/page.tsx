@@ -1,8 +1,9 @@
 import PostContent from '../../../components/post/PostContent'
+
 import {
+  type Post,
   getAllPostSlugs,
   getPostBySlug,
-  Post,
   markdownToHtml,
 } from '../../../lib/post'
 

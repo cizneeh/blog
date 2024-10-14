@@ -8,8 +8,9 @@ function PostBody({ content }: Props) {
   return (
     <div
       className={styles.body}
+      // biome-ignore lint: a
       dangerouslySetInnerHTML={{ __html: content }}
-    ></div>
+    />
   )
 }
 

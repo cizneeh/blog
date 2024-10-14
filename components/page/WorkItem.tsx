@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { Work } from '../../app/works/page'
+import type { Work } from '../../app/works/page'
 import ExternalLinkIcon from '../icons/ExternalLinkIcon'
 
 import styles from './WorkItem.module.css'
@@ -28,6 +28,7 @@ function WorkItem({ work }: Props) {
       )}
       <p>使用技術: {work.techStack.join(', ')}</p>
       {work.description.map((desc, i) => (
+        // biome-ignore lint: a
         <p key={i}>{desc}</p>
       ))}
       {work.githubUrl && (

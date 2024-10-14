@@ -8,6 +8,7 @@ function DateIcon() {
       stroke="currentColor"
       strokeWidth={2}
     >
+      <title>date</title>
       <path
         strokeLinecap="round"
         strokeLinejoin="round"

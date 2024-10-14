@@ -1,5 +1,5 @@
-import { Metadata } from 'next'
-import { PropsWithChildren } from 'react'
+import type { Metadata } from 'next'
+import type { PropsWithChildren } from 'react'
 
 // TODO: titleを動的に設定
 export const metadata: Metadata = {

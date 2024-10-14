@@ -8,6 +8,7 @@ function HamburgerIcon() {
       stroke="currentColor"
       strokeWidth={2}
     >
+      <title>open menu</title>
       <path
         strokeLinecap="round"
         strokeLinejoin="round"

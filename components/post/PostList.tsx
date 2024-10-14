@@ -1,4 +1,4 @@
-import { Post } from '../../lib/post'
+import type { Post } from '../../lib/post'
 
 import PostCard from './PostCard'
 

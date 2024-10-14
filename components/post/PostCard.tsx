@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { Post } from '../../lib/post'
+import type { Post } from '../../lib/post'
 import DateFormatter from '../utils/DateFormatter'
 
 import styles from './PostCard.module.css'
@@ -39,5 +39,5 @@ const cropLimit = 130
 // 初めのheadingに到達するか、一定文字数に達するまで
 function cropContent(markdownStr: string) {
   const markdownIndex = markdownStr.indexOf('#')
-  return markdownStr.substring(0, Math.min(markdownIndex, cropLimit)) + '...'
+  return `${markdownStr.substring(0, Math.min(markdownIndex, cropLimit))}...`
 }
