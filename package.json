@@ -11,7 +11,7 @@
     "lint:write:unsafe": "biome check --write --unsafe ."
   },
   "dependencies": {
-    "date-fns": "^3.6.0",
+    "date-fns": "^4.1.0",
     "gray-matter": "^4.0.3",
     "next": "^14.2.15",
     "prismjs": "^1.29.0",
