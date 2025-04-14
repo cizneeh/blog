@@ -14,11 +14,11 @@ export const HomePage = () => {
           Webエンジニアです。Node.js, React,
           TypeScriptを触っていることが多いです。
         </p>
-        <ul className={styles.list}>
+        {/* <ul className={styles.list}>
           <li>
             <Link href="/works">今までに作ったもの</Link>
           </li>
-        </ul>
+        </ul> */}
       </section>
       <section>
         <h2>Links</h2>

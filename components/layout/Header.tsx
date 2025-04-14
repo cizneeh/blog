@@ -34,7 +34,8 @@ function Header() {
     <header>
       <div className={styles.header}>
         <h2 className="title">
-          <Link href="/">Echizen no Blog</Link>
+          {/* <Link href="/">Echizen no Blog</Link> */}
+          <Link href="/">Echizen</Link>
         </h2>
 
         <div className={styles.nav_menu_pc}>

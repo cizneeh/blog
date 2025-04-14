@@ -19,7 +19,7 @@ function Footer() {
         </li>
       </ul>
       <p className={styles.copyright}>
-        <small>&copy; 2023 Echizen</small>
+        <small>&copy; 2025 Echizen</small>
       </p>
     </footer>
   )
