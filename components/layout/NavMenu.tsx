@@ -19,12 +19,12 @@ function NavMenu() {
         <li className={currentMenu === 'home' ? styles.active : ''}>
           <Link href="/">Home</Link>
         </li>
-        <li className={currentMenu === 'works' ? styles.active : ''}>
+        {/* <li className={currentMenu === 'works' ? styles.active : ''}>
           <Link href="/works">Works</Link>
         </li>
         <li className={currentMenu === 'blog' ? styles.active : ''}>
           <Link href="/blog">Blog</Link>
-        </li>
+        </li> */}
       </ul>
     </nav>
   )
