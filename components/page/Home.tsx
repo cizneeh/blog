@@ -7,7 +7,7 @@ import styles from './Home.module.css'
 export const HomePage = () => {
   return (
     <article className={styles.home}>
-      <h1>Shinjiro Echizen</h1>
+      <h1>Shinjiro Echizen （越前 信次郎）</h1>
       <section>
         <h2>About Me</h2>
         <p>
