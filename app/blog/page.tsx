@@ -10,7 +10,6 @@ export default function BlogPage() {
 
   return (
     <>
-      <h1>ブログ記事</h1>
       <PostList posts={posts} />
     </>
   )
